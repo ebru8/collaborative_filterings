@@ -36,7 +36,6 @@ similarity_scores = pd.DataFrame(cosine_sim[movie_index],columns=["score"])
 movie_indices = similarity_scores.sort_values("score", ascending=False)[1:11].index
 df['title'].iloc[movie_indices]
 
-#### prep script
 
 def content_based_recommender(title, cosine_sim, dataframe):
     indices = pd.Series(dataframe.index, index=dataframe['title'])
